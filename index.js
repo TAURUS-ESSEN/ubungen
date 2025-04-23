@@ -36,7 +36,7 @@ u6button.addEventListener("click", ()=> {
         u7result.innerHTML += `<br><br> … bis du 100 Jahre alt bist. Wenn du heute all diese Produkte kaufst, werden sie früher oder später schlecht, du wirst dich damit vergiften und sterben, ohne 100 Jahre alt zu werden – und die Lösung dieser Aufgabe war dann umsonst`;
     } 
 
-    // Übung 8
+// Übung 8
 const u8Form = document.getElementById('ubung8');
 const u8result = u8Form.querySelector('output');
 const u8input = u8Form.querySelector("input");
@@ -46,3 +46,45 @@ u8button.addEventListener("click", ()=> {
     u8result.textContent = `${u8input.value}°F ist ${tempCelsius }°C`;
     u8input.value = '';
 })
+
+
+// Übung 9
+
+const u9Form = document.getElementById('ubung9');
+const u9result = u9Form.querySelector('output');
+const u9input = u9Form.querySelector("input");
+const u9button = u9Form.querySelector("button");
+u9button.addEventListener("click", ()=> {
+    let noten = checkPunkte(u9input.value);
+    u9result.innerHTML = `${noten} <br> Du kannst das Ergebnis auch in der Browser-Konsole sehen `;
+    u9input.value = ''
+})
+
+function checkPunkte (punkte) {
+    if (punkte >=92 )  {
+        console.log('Note: 1');
+        return `Note: 1` //nur für Visualisation natürlich
+    }
+    else if (punkte >=81 ) {
+        console.log('Note: 2');
+        return `Note: 2`
+    }
+    else if (punkte >=67 ) {
+        console.log('Note: 3');
+        return `Note: 3`
+    }
+    else if (punkte >=50 ) {
+        console.log('Note: 4');
+        return `Note: 4`
+    }
+    else if (punkte >=30 ) {
+        console.log('Note: 5');
+        return `Note: 5`
+    }
+    else   {
+        console.log('Note: 6');
+        return `Note: 6`
+    }
+}
+
+// Übung 10
