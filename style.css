@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    background-image: url('noise_lines.webp');
+    line-height: 1.4;
+    font-family:  Century;
+}
+
+.wrapper {
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 5% auto;
+    padding: 2em;
+    background-color: rgb(239, 239, 236);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.642);
+}
+
+form {
+    text-align: center;
+}
+
+input, button {
+    min-height: 30px;
+    padding: 0.5em;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-family:  Harman Retro;
+    font-size: 1.5em;
+}
+
+::placeholder {
+    font-size: 0.8em;
+}
+
+button {
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+    width: 170px;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: beige;
+    color: black;
+
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.results {
+    margin: 1em;
+    font-size: 1.5em;
+    text-align: center;
+}
