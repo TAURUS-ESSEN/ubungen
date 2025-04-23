@@ -13,7 +13,7 @@ body {
 
 .wrapper {
     width: 600px;
-    height: 500px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -22,6 +22,12 @@ body {
     background-color: rgb(239, 239, 236);
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.642);
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 form {
@@ -65,4 +71,18 @@ button:hover {
     margin: 1em;
     font-size: 1.5em;
     text-align: center;
+}
+
+details {
+    background-color: rgb(252, 252, 245);
+    word-wrap: break-word;
+    padding: 0.5em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+summary {
+    color: rgb(220, 71, 2);
 }
