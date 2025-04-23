@@ -88,3 +88,21 @@ function checkPunkte (punkte) {
 }
 
 // Übung 10
+let greet = hallo(navigator.language);
+// console.log(language)
+
+function hallo(language) {
+    switch (language) {
+        case "de-DE":
+            return "Hallo Welt!";
+        case "en-US":
+            return "Hello World!";
+        case "es-ES":
+            return "¡Hola mundo!";
+        case "ru-RU":
+            return "Привет Мир!";
+        default:
+            return "Hallo Welt!";
+    }
+}
+document.getElementById('u10result').textContent = greet;
