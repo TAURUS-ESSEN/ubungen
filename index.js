@@ -1,5 +1,4 @@
 'use strict';
-
 let date = new Date();
 let heutigeJahr  = date.getFullYear();
 let alter = 0;
@@ -47,9 +46,7 @@ u8button.addEventListener("click", ()=> {
     u8input.value = '';
 })
 
-
 // Übung 9
-
 const u9Form = document.getElementById('ubung9');
 const u9result = u9Form.querySelector('output');
 const u9input = u9Form.querySelector("input");
@@ -89,7 +86,7 @@ function checkPunkte (punkte) {
 
 // Übung 10
 let greet = hallo(navigator.language);
-// console.log(language)
+document.getElementById('u10result').textContent = greet;
 
 function hallo(language) {
     switch (language) {
@@ -105,4 +102,37 @@ function hallo(language) {
             return "Hallo Welt!";
     }
 }
-document.getElementById('u10result').textContent = greet;
+
+// Übung 11
+
+// Mouse -> Mice, Sheep -> Sheep, Goose -> Geese
+let ausnahmen = [  {mouse: "mice"}, {Sheep: "Sheep"}, {Goose: "Geese"  }];
+
+const u11Form = document.getElementById('ubung11');
+const u11result = u11Form.querySelector('output');
+const u11input = u11Form.querySelector("input");
+const u11button = u11Form.querySelector("button");
+u11button.addEventListener("click", ()=> {
+    // let result = check (u11input.value)
+    // console.log("result"+result);
+    // u11result.textContent = "x"+check (u11input.value);
+    // u11input.value = ''
+})
+
+// function check(word) {
+//     let result2 = '';
+//     ausnahmen.some(value =>   {
+//         // console.log("value = "+JSON.stringify(value))
+//         for (let key in value) {
+//             if (key.toLowerCase() === word.toLowerCase()) {
+//                 result2 = 1;
+//                 break
+//             }
+//             else {
+//                 result2 = 0
+//             }
+//         }
+//     })
+//     result2 = (result2 === 0) ? word+'s' : value[key]
+//     console.log("result2="+result2)
+// }

@@ -47,6 +47,10 @@ input, button {
     width: 100px;
 }
 
+.normal__input {
+    width: 200px;
+}
+
 ::placeholder {
     font-size: 0.8em;
 }
@@ -60,7 +64,7 @@ button {
 }
 
 button:hover {
-    background-color: beige;
+    background-color: rgb(255, 166, 0);
     color: black;
 
 }
