@@ -53,7 +53,7 @@ const u9input = u9Form.querySelector("input");
 const u9button = u9Form.querySelector("button");
 u9button.addEventListener("click", ()=> {
     let noten = checkPunkte(u9input.value);
-    u9result.innerHTML = `${noten} <br> Du kannst das Ergebnis auch in der Browser-Konsole sehen `;
+    u9result.innerHTML = `${noten}`;
     u9input.value = ''
 })
 

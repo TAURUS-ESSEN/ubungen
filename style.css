@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +10,7 @@ body {
     background-color: lightgray;
     background-image: url('noise_lines.webp');
     line-height: 1.4;
-    font-family:  Century;
+    font-family:  'Sour Gummy';
 }
 
 .wrapper {
@@ -39,7 +41,7 @@ input, button {
     padding: 0.5em;
     border: 1px solid lightgrey;
     border-radius: 5px;
-    font-family:  Harman Retro;
+    font-family:  'Sour Gummy';
     font-size: 1.5em;
 }
 
@@ -69,16 +71,22 @@ button:hover {
 
 }
 
+.flex-row {
+    display: flex;
+    align-items: center;
+    gap:1em;
+}
+
 .show {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.5s ease;
 }
 
-.results {
-    margin: 1em;
-    font-size: 1.5em;
-    text-align: center;
+.result {
+    margin: 0em;
+    font-size: 1em;
+    /* text-align: center; */
 }
 
 details {
