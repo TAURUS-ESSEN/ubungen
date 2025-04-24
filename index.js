@@ -171,13 +171,19 @@ const u15Form = document.getElementById('ubung15');
 const u15ResultField = u15Form.querySelector('output');
 const u15input = u15Form.querySelector("input");
 const u15button = u15Form.querySelector("button");
+const muenzen = [200, 100, 50, 20, 10, 5, 2, 1];
+
 u15button.addEventListener("click", () =>{ 
     let result = inMuenzen(u15input.value);
     u15ResultField.textContent = result; 
     u15input.value = '';
 })
-
 function inMuenzen(zahl) {
+    zahl = zahl * 100;
+    for (let i=0; i <1; i++) {
+        console.log('zahl='+zahl, 'muenzen='+muenzen[i])
+        zahl = zahl/muenzen[i]; 
+    }
     console.log("test")
     return zahl
 }

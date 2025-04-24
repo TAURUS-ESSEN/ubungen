@@ -110,3 +110,10 @@ footer a {
 footer a:hover {
     color: rgb(34, 12, 2);
 }
+
+@medix max(700px) {
+    .wrapper {
+        background-color: red;
+        width: auto;
+    }
+}
