@@ -10,9 +10,11 @@ const u6result = document.getElementById('u6result');
 const u6input = u6Form.querySelector("input");
 const u6button = u6Form .querySelector("button");
 u6button.addEventListener("click", ()=> {
+    if (u6input.value !=='') {
     alter = heutigeJahr - u6input.value;
     u6result.textContent = `Im Jahr ${heutigeJahr} bin ich ${alter-1} oder ${alter} Jahre alt.`;
     ubung7();
+    }
 })
 
 // Übung 7
@@ -41,9 +43,11 @@ const u8result = u8Form.querySelector('output');
 const u8input = u8Form.querySelector("input");
 const u8button = u8Form.querySelector("button");
 u8button.addEventListener("click", ()=> {
-    const tempCelsius = ((u8input.value - 32) * 5 / 9).toFixed(1);
-    u8result.textContent = `${u8input.value}°F ist ${tempCelsius }°C`;
-    u8input.value = '';
+    if (u8input.value !=='') {
+        const tempCelsius = ((u8input.value - 32) * 5 / 9).toFixed(1);
+        u8result.textContent = `${u8input.value}°F ist ${tempCelsius }°C`;
+        u8input.value = '';
+    }
 })
 
 // Übung 9
@@ -52,9 +56,11 @@ const u9result = u9Form.querySelector('output');
 const u9input = u9Form.querySelector("input");
 const u9button = u9Form.querySelector("button");
 u9button.addEventListener("click", ()=> {
-    let noten = checkPunkte(u9input.value);
-    u9result.innerHTML = `${noten}`;
-    u9input.value = ''
+    if (u9input.value !=='') {
+        let noten = checkPunkte(u9input.value);
+        u9result.innerHTML = `${noten}`;
+        u9input.value = '';
+    }
 })
 
 function checkPunkte (punkte) {
@@ -139,8 +145,10 @@ const u13ResultField = u13Form.querySelector('output');
 const u13input = u13Form.querySelector("input");
 const u13button = u13Form.querySelector("button");
 u13button.addEventListener("click", () =>{ 
+    if (u13input.value !=='') {
     let result = umkehren(u13input.value);
     u13ResultField.textContent = result; 
+    }
 })
 
 function umkehren(wort) {
@@ -154,10 +162,13 @@ const u14Form = document.getElementById('ubung14');
 const u14ResultField = u14Form.querySelector('output');
 const u14input = u14Form.querySelector("input");
 const u14button = u14Form.querySelector("button");
-u14button.addEventListener("click", () =>{ 
-    let result = istPalindrom(u14input.value);
-    u14ResultField.textContent = result; 
-    u14input.value = '';
+u14button.addEventListener("click", () => { 
+    if (u14input.value !=='') {
+        let result = istPalindrom(u14input.value);
+        u14ResultField.textContent = result; 
+        u14input.value = '';
+    }
+    
 })
 
 function istPalindrom(wort) {
@@ -174,9 +185,14 @@ const u15button = u15Form.querySelector("button");
 const muenzen = [2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01];
 
 u15button.addEventListener("click", () =>{ 
-    let result = inMuenzen(u15input.value);
-    u15ResultField.textContent = result; 
-    u15input.value = '';
+    if (u15input.value !=='') {
+        let result = inMuenzen(u15input.value);
+        u15ResultField.textContent = result; 
+        u15input.value = '';
+    } else {
+        u15ResultField.textContent = 'Input ist leer';
+    }
+    
 })
 
 function inMuenzen(zahl) {
@@ -194,3 +210,5 @@ function inMuenzen(zahl) {
     }
     }
 }
+
+ 
