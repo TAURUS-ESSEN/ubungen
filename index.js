@@ -104,35 +104,31 @@ function hallo(language) {
 }
 
 // Übung 11
-
 // Mouse -> Mice, Sheep -> Sheep, Goose -> Geese
-let ausnahmen = [  {mouse: "mice"}, {Sheep: "Sheep"}, {Goose: "Geese"  }];
+let ausnahmen =   { 
+    mouse: "mice",
+    sheep: "sheep",
+    goose: "geese"
+}
 
 const u11Form = document.getElementById('ubung11');
-const u11result = u11Form.querySelector('output');
+const u11ResultField = u11Form.querySelector('output');
 const u11input = u11Form.querySelector("input");
 const u11button = u11Form.querySelector("button");
 u11button.addEventListener("click", ()=> {
-    // let result = check (u11input.value)
-    // console.log("result"+result);
-    // u11result.textContent = "x"+check (u11input.value);
-    // u11input.value = ''
+    if (/\d/.test(u11input.value)) {
+        u11result.textContent = "Keine Zahlen.";
+        return;
+    }
+    u11ResultField.textContent = checkAusnahmen(u11input.value);
+    u11input.value = ''
 })
 
-// function check(word) {
-//     let result2 = '';
-//     ausnahmen.some(value =>   {
-//         // console.log("value = "+JSON.stringify(value))
-//         for (let key in value) {
-//             if (key.toLowerCase() === word.toLowerCase()) {
-//                 result2 = 1;
-//                 break
-//             }
-//             else {
-//                 result2 = 0
-//             }
-//         }
-//     })
-//     result2 = (result2 === 0) ? word+'s' : value[key]
-//     console.log("result2="+result2)
-// }
+function checkAusnahmen(tier) {
+    for (let key in ausnahmen) {
+        if (key.toLowerCase() === tier.toLowerCase()) {
+        return ausnahmen[key]
+        }
+    }
+    return tier+'s'
+}
