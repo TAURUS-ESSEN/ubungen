@@ -13,9 +13,14 @@
     --button-background-hover: var(--additional2-color);
     --details-background: var(--additional3-color);
 
+    --details-color: var(--additional1-color);
     --summary-color: var(--additional2-color);
+    --summary-color-hover: var(--additional1-color);
+    --button-color: var(--secondary-color);
+    --button-color-hover: var(--additional3-color);
     --footer-a-color: var(--additional2-color);
     --footer-a-color-hover: var(--additional1-color);
+    --results-textcolor: var(--additional1-color);
 }
 
 * {
@@ -31,11 +36,41 @@ body {
     font-family:  'Sour Gummy';
 }
 
+body[data-theme="2"] {
+    --primary-color: #d3d3d3;
+    --secondary-color: #2e2e2c;
+    --additional1-color: #ffa600;
+    --additional2-color: #d5d3d3;
+    --additional3-color: #fcfcf5;
+    --additional4-color: #000;
+
+    --body-background: var(--primary-color);
+    --wrapper-background: var(--secondary-color);
+    --button-background: var(--additional1-color);
+    --button-background-hover: var(--additional2-color);
+    --details-background: var(--additional3-color);
+
+    
+    --details-color: var(--additional3-color);
+    --summary-color: var(--additional1-color);
+    --summary-color-hover: var(--additional3-color);
+    --button-color: var(--additional3-color);
+    --button-color-hover: var(--additional4-color);
+    --footer-a-color: var(--additional1-color);
+    --footer-a-color-hover: var(--additional3-color);
+    --results-textcolor: var(--additional3-color);
+}
+
+body[data-theme="2"] .theme-button::before {
+    transform: translateX(30px);
+  }
+
 .wrapper {
     width: 700px;
     height: auto;
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 1em;
     margin: 2% auto;
     padding: 2em;
@@ -78,14 +113,14 @@ input, button {
 button {
     cursor: pointer;
     background-color: var(--button-background);
-    color: #fff;
+    color: var(--button-color);
     width: 170px;
     transition: 0.5s;
 }
 
 button:hover {
     background-color: var(--button-background-hover);
-    color: black;
+    color: var(--button-color-hover);
 
 }
 
@@ -103,20 +138,30 @@ button:hover {
 
 .result {
     margin: 0em;
+    color: var(--results-textcolor);
     font-size: 1.3em;
 }
 
 details {
-    background-color: var(--details-background);
+    /* background-color: var(--details-background); */
     word-wrap: break-word;
     padding: 0.5em;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     cursor: pointer;
+    color: var(--details-color);
+    
 }
 
 summary {
     color: var(--summary-color);
+    padding-left: 1em;
+    transition: 0.5s;
+}
+
+summary:hover {
+    color:var(--summary-color-hover);
+    text-decoration:underline;
 }
 
 footer a {
@@ -132,10 +177,43 @@ footer a:hover {
     flex-wrap: wrap;
 }
 
+.toggler-container {
+    position: absolute;
+    top:0;
+    right: -80px;
+}
+
+.theme-button {
+    width: 60px;
+    height: 30px;
+    background-color: gray;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-button::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
 @media (max-width: 700px) {
     .wrapper {
         width: auto;
         padding: 1em;
+    }
+
+    .toggler-container {
+        display: none;
     }
 
     input, button, .result {
@@ -143,6 +221,6 @@ footer a:hover {
     }
 
     button {
-        width: 120px;
+        width: 8em;
     }
 }

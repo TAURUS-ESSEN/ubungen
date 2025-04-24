@@ -3,6 +3,12 @@ let date = new Date();
 let heutigeJahr  = date.getFullYear();
 let alter = 0;
 
+const themeToggler = document.getElementById("theme-toggle");
+themeToggler.addEventListener("click", () => {
+    document.body.dataset.theme = document.body.dataset.theme === "1" ? "2" : "1";
+});
+
+
 // Übung 6
 let geburtsJahr = 0;
 const u6Form = document.getElementById('ubung6');
