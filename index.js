@@ -132,3 +132,18 @@ function checkAusnahmen(tier) {
     }
     return tier+'s'
 }
+
+// Übung 13 
+const u13Form = document.getElementById('ubung13');
+const u13ResultField = u13Form.querySelector('output');
+const u13input = u13Form.querySelector("input");
+const u13button = u13Form.querySelector("button");
+u13button.addEventListener("click", () =>{ 
+    let result = umkehren(u13input.value);
+    u13ResultField.textContent = result; 
+})
+
+function umkehren(wort) {
+    let result = wort.split("").reverse().join("");
+    return result
+}
