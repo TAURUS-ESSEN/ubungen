@@ -171,19 +171,26 @@ const u15Form = document.getElementById('ubung15');
 const u15ResultField = u15Form.querySelector('output');
 const u15input = u15Form.querySelector("input");
 const u15button = u15Form.querySelector("button");
-const muenzen = [200, 100, 50, 20, 10, 5, 2, 1];
+const muenzen = [2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01];
 
 u15button.addEventListener("click", () =>{ 
     let result = inMuenzen(u15input.value);
     u15ResultField.textContent = result; 
     u15input.value = '';
 })
+
 function inMuenzen(zahl) {
-    zahl = zahl * 100;
-    for (let i=0; i <1; i++) {
-        console.log('zahl='+zahl, 'muenzen='+muenzen[i])
-        zahl = zahl/muenzen[i]; 
+    // let gerundeteZahl = 0;
+    let string = `${zahl} Euro sind `;
+    for (let i=0; i<muenzen.length; i++) {
+        if (muenzen[i] <= zahl) {
+            let gerundeteZahl = Math.floor(zahl/muenzen[i]);
+            zahl = Number((zahl - gerundeteZahl*muenzen[i]).toFixed(2));
+            let muenze = (muenzen[i] >=1) ? muenzen[i] + " Euro": muenzen[i]*100 + " Cent";
+            string += `${gerundeteZahl} mal ${muenze} + `
+        if (zahl < 0.01) {
+            return string.trim().slice(0, -2);
+        }
     }
-    console.log("test")
-    return zahl
+    }
 }
