@@ -102,3 +102,11 @@ details {
 summary {
     color: rgb(220, 71, 2);
 }
+
+footer a {
+    color: rgb(220, 71, 2);
+}
+
+footer a:hover {
+    color: rgb(34, 12, 2);
+}
