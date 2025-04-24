@@ -147,3 +147,21 @@ function umkehren(wort) {
     let result = wort.split("").reverse().join("");
     return result
 }
+
+// Übung 14 
+
+const u14Form = document.getElementById('ubung14');
+const u14ResultField = u14Form.querySelector('output');
+const u14input = u14Form.querySelector("input");
+const u14button = u14Form.querySelector("button");
+u14button.addEventListener("click", () =>{ 
+    let result = istPalindrom(u14input.value);
+    u14ResultField.textContent = result; 
+    u14input.value = '';
+})
+
+function istPalindrom(wort) {
+    let wortUmgekert = wort.split("").reverse().join("");
+    let result = (wort.toLowerCase() === wortUmgekert.toLowerCase()) ? "Ja" : "Nein"
+    return result
+}
