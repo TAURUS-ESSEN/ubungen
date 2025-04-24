@@ -165,3 +165,19 @@ function istPalindrom(wort) {
     let result = (wort.toLowerCase() === wortUmgekert.toLowerCase()) ? "Ja" : "Nein"
     return result
 }
+
+// Übung 15
+const u15Form = document.getElementById('ubung15');
+const u15ResultField = u15Form.querySelector('output');
+const u15input = u15Form.querySelector("input");
+const u15button = u15Form.querySelector("button");
+u15button.addEventListener("click", () =>{ 
+    let result = inMuenzen(u15input.value);
+    u15ResultField.textContent = result; 
+    u15input.value = '';
+})
+
+function inMuenzen(zahl) {
+    console.log("test")
+    return zahl
+}
