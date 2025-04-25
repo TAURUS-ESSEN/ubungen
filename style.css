@@ -52,7 +52,7 @@ body[data-theme="2"] {
     --wrapper-background: var(--additional7-color);
     --button-background: var(--additional1-color);
     --button-background-hover: var(--additional5-color);
-    --details-background: var(--secondary-color);
+    --details-background: var(---additional7-color);
 
     
     --details-color: var(--additional3-color);
