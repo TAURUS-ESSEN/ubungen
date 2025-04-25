@@ -4,9 +4,9 @@
     --primary-color: #d3d3d3;
     --secondary-color: #efefec;
     --additional1-color: #000;
-    --additional2-color: #ff8c00;
+    --additional2-color: #ff7b00;
     --additional3-color: #fcfcf5;
-    --additional4-color:  url('45degreee_fabric.webp');
+    --additional4-color:  url('noise_lines.webp');
 
     --body-background: var(--primary-color);
     --wrapper-background: var(--secondary-color);
@@ -32,7 +32,7 @@
 
 body {
     background-color: var(--body-background);
-    background-image: url('noise_lines.webp');
+    background-image: url('45degreee_fabric.webp');
     line-height: 1.4;
     font-family:  'Sour Gummy';
 }
