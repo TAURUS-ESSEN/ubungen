@@ -4,18 +4,19 @@
     --primary-color: #d3d3d3;
     --secondary-color: #efefec;
     --additional1-color: #000;
-    --additional2-color: #ffa600;
+    --additional2-color: #ff8c00;
     --additional3-color: #fcfcf5;
+    --additional4-color:  url('45degreee_fabric.webp');
 
     --body-background: var(--primary-color);
     --wrapper-background: var(--secondary-color);
     --button-background: var(--additional1-color);
     --button-background-hover: var(--additional2-color);
-    --details-background: var(--additional3-color);
+    --details-background: var(--additional4-color);
 
     --details-color: var(--additional1-color);
-    --summary-color: var(--additional2-color);
-    --summary-color-hover: var(--additional1-color);
+    --summary-color: var(--additional1-color);
+    --summary-color-hover: var(--additional2-color);
     --button-color: var(--secondary-color);
     --button-color-hover: var(--additional3-color);
     --footer-a-color: var(--additional2-color);
@@ -38,24 +39,27 @@ body {
 
 body[data-theme="2"] {
     --primary-color: #d3d3d3;
-    --secondary-color: #2e2e2c;
+    --secondary-color: #20201d;
     --additional1-color: #ffa600;
     --additional2-color: #d5d3d3;
     --additional3-color: #fcfcf5;
     --additional4-color: #000;
+    --additional5-color: linear-gradient(to bottom, #FFB75E, #ed8f03);
+    --additional6-color: linear-gradient(to right, #2e2e2c, #2e2e2c, #464545, #2e2e2c);
+    --additional7-color:  url('micro_carbon.png');
 
     --body-background: var(--primary-color);
-    --wrapper-background: var(--secondary-color);
+    --wrapper-background: var(--additional7-color);
     --button-background: var(--additional1-color);
-    --button-background-hover: var(--additional2-color);
-    --details-background: var(--additional3-color);
+    --button-background-hover: var(--additional5-color);
+    --details-background: var(--secondary-color);
 
     
     --details-color: var(--additional3-color);
     --summary-color: var(--additional1-color);
     --summary-color-hover: var(--additional3-color);
     --button-color: var(--additional3-color);
-    --button-color-hover: var(--additional4-color);
+    --button-color-hover: var(--additional3-color);
     --footer-a-color: var(--additional1-color);
     --footer-a-color-hover: var(--additional3-color);
     --results-textcolor: var(--additional3-color);
@@ -74,7 +78,7 @@ body[data-theme="2"] .theme-button::before {
     gap: 1em;
     margin: 2% auto;
     padding: 2em;
-    background-color: var(--wrapper-background);
+    background: var(--wrapper-background);
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.642);
 }
@@ -119,9 +123,8 @@ button {
 }
 
 button:hover {
-    background-color: var(--button-background-hover);
+    background: var(--button-background-hover);
     color: var(--button-color-hover);
-
 }
 
 .flex-row {
@@ -143,7 +146,7 @@ button:hover {
 }
 
 details {
-    /* background-color: var(--details-background); */
+    background: var(--details-background);
     word-wrap: break-word;
     padding: 0.5em;
     border: 1px solid var(--primary-color);
