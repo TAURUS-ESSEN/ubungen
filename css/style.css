@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galdeano&family=Oxanium:wght@200..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
     --primary-color: #d3d3d3;
@@ -43,7 +43,7 @@ body {
     background-color: var(--body-background);
     background-image: url('../img/45degreee_fabric.webp');
     line-height: 1.4;
-    font-family:  'Sour Gummy';
+    font-family:  'Galdeano';
 }
 
 body[data-theme="2"] {
@@ -170,7 +170,8 @@ input, button {
     padding: 0.3em;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
-    font-family:  'Sour Gummy';
+    font-family:  'Galdeano';
+    font-weight: 600;
     font-size: 1.3em;
 }
 
