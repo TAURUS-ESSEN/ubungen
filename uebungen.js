@@ -12,7 +12,7 @@ u16ResultFoto.src = `./img/`+zeigenZeitraumFoto(stunden);
 
 function zeigenZeitraumFoto(stunden) {
     if (stunden >=22 ||  stunden < 6) {
-        return "gute-nacht.png"
+        return "gute-nacht.jpg"
     }
     else if ((stunden >=6) && (stunden < 12)) {
         return "guten-morgen.jpg"
