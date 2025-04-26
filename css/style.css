@@ -98,30 +98,32 @@ body[data-theme="2"] .theme-button::before {
 
 nav ul {
     display: flex;
-    gap:1px;
     margin-left: 2em;
 }
 
 nav li {
-    width: 120px;
-    margin-right: 0.5em;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    min-width: 120px;
+    min-height: 44px;
+    margin-right: 0.5em;
     padding: 0.2em;
+
     list-style: none;
+
     background-color: var(--nav-li-background);
     border-radius: 5px 5px 0 0;
-    min-height: 44px;
-    transition: 0.3s;
     box-shadow: 0 0 5px rgb(86, 85, 85);
-    font-size: 1em;
+
+    transition: 0.3s;
 }
 
 nav li:hover {
+    padding-bottom: 0.6em;
     background-color: var(--nav-li-background-hover);
     transform: scaleY(1.6);
-    padding-bottom: 0.6em;
 }
 
 nav li.active {
@@ -132,13 +134,18 @@ li a {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    height: 100%;
+
     text-decoration: none;
     text-transform:uppercase;
-    height: 100%;
+    font-size: 1em;
+    font-weight: 600;
+
     color: var(--nav-a-color);
+
     transform: scale(1);
     transition: 0.3s;
-    font-weight: 600;
 }
 
 li:hover a, li.active:hover a{
@@ -152,9 +159,11 @@ li.active a {
 main {
     display: flex;
     flex-direction: column;
-    position: relative;
     gap: 1em;
+
+    position: relative;
     padding: 2em;
+
     background: var(--wrapper-background);
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.642);
@@ -173,8 +182,10 @@ form {
 input, button {
     min-height: 30px;
     padding: 0.3em;
+
     border: 1px solid var(--primary-color);
     border-radius: 5px;
+    
     font-family:  'Galdeano';
     font-weight: 600;
     font-size: 1.3em;
