@@ -40,7 +40,8 @@
 @font-face {
     font-family: Galdeano;
     src: url('/fonts/Galdeano-Regular.woff2') format('woff2'),
-         url('/fonts/Galdeano-Regular.ttf') format('ttf');
+        url('/fonts/Galdeano-Regular.ttf') format('ttf');
+        font-display: swap;
 }
 
 body {
@@ -53,7 +54,6 @@ body {
 body[data-theme="2"] {
     --primary-color: #d3d3d3;
     --secondary-color: #20201d;
-    /* --additional1-color: #ffa600; */
     --additional1-color: #ffa600;
     --additional2-color: #d5d3d3;
     --additional3-color: #fcfcf5;
@@ -115,6 +115,7 @@ nav li {
     min-height: 44px;
     transition: 0.3s;
     box-shadow: 0 0 5px rgb(86, 85, 85);
+    font-size: 1em;
 }
 
 nav li:hover {
