@@ -219,7 +219,6 @@ button:hover {
 }
 
 .result img {
-    display: inline-block;
     float: left;
     width: 60%;
     border-radius: 10px;
@@ -227,8 +226,10 @@ button:hover {
 }
 
 .result ul {
-    margin-top: 0.5em;
+    margin: 0.5em;
+    padding: 2em;
     font-size: 0.8em;
+    list-style: none;
 }
 
 .clear {
