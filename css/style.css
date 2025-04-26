@@ -39,8 +39,8 @@
 
 @font-face {
     font-family: Galdeano;
-    src: url('/fonts/Galdeano-Regular.woff2') format('woff2'),
-        url('/fonts/Galdeano-Regular.ttf') format('ttf');
+    src: url('./fonts/Galdeano-Regular.woff2') format('woff2'),
+        url('./fonts/Galdeano-Regular.ttf') format('ttf');
         font-display: swap;
 }
 
