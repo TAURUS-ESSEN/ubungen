@@ -29,6 +29,8 @@
     --nav-a-color: var(--white);
     --nav-a-color-hover: var(--white);
     --nav-a-color-active: var(--additional-color);
+
+    --toggler-background: var(--additional1-color);
 }
 
 * {
@@ -204,11 +206,13 @@ input, button {
 }
 
 form button {
-    cursor: pointer;
+    min-width: 170px;
+
     background-color: var(--button-background);
     color: var(--button-color);
-    min-width: 170px;
+
     transition: 0.5s;
+    cursor: pointer;
 }
 
 button:hover {
@@ -238,8 +242,8 @@ button:hover {
 .result img {
     float: left;
     width: 60%;
-    border-radius: 10px;
     margin: 0.5em;
+    border-radius: 10px;
 }
 
 .result ul {
@@ -254,19 +258,18 @@ button:hover {
 }
 
 details {
+    padding: 0.5em;
     background: var(--details-background);
     word-wrap: break-word;
-    padding: 0.5em;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
-    cursor: pointer;
     color: var(--details-color);
-    
+    cursor: pointer;
 }
 
 summary {
-    color: var(--summary-color);
     padding-left: 1em;
+    color: var(--summary-color);
     transition: 0.5s;
 }
 
@@ -290,19 +293,20 @@ summary:hover {
 
 .toggler-container {
     position: absolute;
-    top:0;
-    right: -80px;
+    top:-35px;
+    right: 5px;
 }
 
 .theme-button {
     width: 60px;
     height: 30px;
-    background-color: gray;
+    background-color: var(--toggler-background);
     border: none;
     border-radius: 15px;
     position: relative;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 0 5px rgb(138, 138, 138);
 }
 
 .theme-button::before {
@@ -316,7 +320,6 @@ summary:hover {
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
-
 
 @media (max-width: 700px) {
     .wrapper {
