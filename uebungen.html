@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Übungen 16-...</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/extra.css">
+    <script  src="./uebungen.js" type="module"></script>
+</head>
+<body  data-theme="1">
+    <div class="wrapper">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" >Übungen 6-15</a></li>
+                <li class="active"><a href="uebungen.html">Übungen 16-...</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <div class="toggler-container">
+            <button id="theme-toggle" class="theme-button"></button>
+        </div>
+        <article>
+            <details>
+                <summary>Übung 16</summary>
+                <p>Schreibe ein Javscript, welches Morgens, Mittags und Abends die
+                    Internetseite jeweils unterschiedlich einfärbt.
+                </p>
+            </details>
+            <div class="result" id="u16result">
+                <img src="./img/guten-tag.jpg" id="u16resultFoto" width="400" alt="">
+                <div>Dieses Foto ändert sich automatisch je nach aktueller Uhrzeit:
+                    <ul>
+                        <li>06.00-11.59 Morgen</li>
+                        <li>12.00-16.59 Tag</li>
+                        <li>17.00-21.59 Abend</li>
+                        <li>22.00-05.59 Nacht</li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <hr>
+        </article>
+        <article>
+            <details>
+                <summary>Übung 17</summary>
+                <p> Erstellen Sie einen Lottozahlengenerator. Es sollen 6 Zahlen aus 49 ausgegeben werden.
+                    <br>Stellen Sie sicher, dass keine Lottozahl doppelt vorkommt  array.indexOf()
+                </p>
+            </details>
+            <form action="#" class="flex-row " id="ubung17">
+                <button type="button">Gewinnummers &darr;</button>
+            </form>
+             <div class="result lottery" id="u17result"></div>
+            <hr>
+        </article>
+
+        <article>
+            <details>
+                <summary>Übung 18</summary>
+                <p>  Auf einer Intersetseite sollen Datum und Uhrzeit stehen im folgenden Format:
+                    <br> 29. April 2024, 10:32
+                </p>
+            </details>
+            <div class="result" id="u18result"></div>
+            <hr>
+        </article>
+
+        <article>
+            <details>
+                <summary>Übung 19</summary>
+                <p>  Schreiben Sie ein kurzes Programm, das jede Zahl von 1 bis 100 ausgibt.
+                    <br>Für jedes Vielfache von 3, schreibe “Fizz” anstelle der Zahl.
+                    <br>Für jedes Vielfache von 5, schreibe “Buzz” anstelle der Zahl.
+                    <br>Für Zahlen, die ein Vielfaches von 3 und 5 sind, schreibe “FizzBuzz” statt der Zahl.
+                </p>
+            </details>
+            <form action="#" class="flex-row" id="ubung19">
+                <input type="text" class="klein__input" pattern="\d{3}" maxlength="3" inputmode="numeric" placeholder="1-200"> 
+                <button type="button" >Generate &darr;</button>
+            </form>
+            <div class="result" id="u19result"></div>
+            <hr>
+        </article>
+        
+
+
+                <div class="code_link">
+                    <a href="https://github.com/TAURUS-ESSEN/ubungen" target="_blank" title="GitHub link">Code ist hier</a>
+                </div>
+            </main>
+        </div>
+</body>
+</html>

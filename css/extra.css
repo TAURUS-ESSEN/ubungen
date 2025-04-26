@@ -1,0 +1,17 @@
+
+.lottery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.lottoball {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/lotto-ball.png');
+    width:70px;
+    height:70px;
+    font-size: 1em;
+    color: var(--black);
+}
