@@ -94,3 +94,42 @@ function fizzBuzz(anzahl) {
     console.log(str)
     return str;
 }
+
+
+
+// Übung 20
+const followers = [
+    { likes: 0, name: "Klaus", message: "Klaus mag das"},
+    { likes: 1, name: ['Alexandra', 'Maria'], message: "Klaus mag das" },
+    { likes: 2, name: ['Max', 'Johannes', 'Mark'], message: "Max, Johannes und Mark mögen das" },
+    { likes: 3, name: ['Alexandra', 'Maria', 'Mark', 'Max'] , message: "Alexandra, Maria und 2 weitere mögen das" }  
+]
+
+const u20Form = document.getElementById('ubung20');
+const u20result = document.getElementById("u20result");
+const u20output = u20Form.querySelector("output");
+const u20button = u20Form.querySelector("button");
+let likesCounter = '';
+u20button.addEventListener("click", () => {
+    if (likesCounter <= 3) {
+    u20output.textContent = ++likesCounter;
+    u20result.innerHTML +=  '<br>' + showLikes();
+    }
+})
+
+function showLikes() {
+    let currentMessage = '';
+    if (likesCounter < 4) {
+        followers.filter(follower => {
+            if (follower.likes === likesCounter) 
+            {
+                currentMessage += follower.message 
+            }
+        })
+    }
+    return currentMessage
+}
+
+
+// Übung 21
+input = ['zgsnvdmlfuplrubt', 'vlhagaovgqjmgvwq', 'ffumlmqwfcsyqpss', 'zztdcqzqddaazdjp', 'eavfzjajkjesnlsb', 'urrvucyrzzzooxhx', 'xdwduffwgcptfwad', 'orbryxwrmvkrsxsr', 'jzfeybjlgqikjcow', 'mayoqiswqqryvqdi', 'iiyrkoujhgpgkcvx'];

@@ -28,7 +28,7 @@
     --nav-li-background-active:  var(--secondary-color);
     --nav-a-color: var(--white);
     --nav-a-color-hover: var(--white);
-    --nav-a-color-active: var(--additional-color);
+    --nav-a-color-active: var(--additional1-color);
 
     --toggler-background: var(--additional1-color);
 }
@@ -42,7 +42,7 @@
 @font-face {
     font-family: Galdeano;
     src: url('../fonts/Galdeano-Regular.woff2') format('woff2'),
-        url('../fonts/Galdeano-Regular.ttf') format('ttf');
+        url('../fonts/Galdeano-Regular.ttf') format('truetype');
         font-display: swap;
 }
 
@@ -68,7 +68,7 @@ body[data-theme="2"] {
     --wrapper-background: var(--additional7-color);
     --button-background: var(--additional1-color);
     --button-background-hover: var(--additional5-color);
-    --details-background: var(---additional7-color);
+    --details-background: var(--additional7-color);
 
     
     --details-color: var(--additional3-color);
@@ -147,7 +147,7 @@ li a {
     color: var(--nav-a-color);
 
     transform: scale(1);
-    transition: 0.3s;
+    transition: transform 0.3s ease;
 }
 
 li:hover a, li.active:hover a{
@@ -188,8 +188,8 @@ input, button {
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     
-    font-family:  'Galdeano';
-    font-weight: 600;
+    font-family:  Galdeano;
+    font-weight: 500;
     font-size: 1.3em;
 }
 
