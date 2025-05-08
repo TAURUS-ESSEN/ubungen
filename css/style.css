@@ -3,8 +3,7 @@
     --secondary-color: #efefec;
     --additional1-color: #000;
     --additional2-color: #ff7b00;
-    --additional3-color: #fcfcf5;
-    --additional4-color:  url('../img/noise_lines.webp');
+    --additional3-color:  url('../img/noise_lines.webp');
     --white:  #fff;
     --black:  #000;
 
@@ -12,13 +11,13 @@
     --wrapper-background: var(--secondary-color);
     --button-background: var(--additional1-color);
     --button-background-hover: var(--additional2-color);
-    --details-background: var(--additional4-color);
+    --details-background: var(--additional3-color);
 
     --details-color: var(--additional1-color);
     --summary-color: var(--additional1-color);
     --summary-color-hover: var(--additional2-color);
     --button-color: var(--secondary-color);
-    --button-color-hover: var(--additional3-color);
+    --button-color-hover: var(--white);
     --footer-a-color: var(--additional2-color);
     --footer-a-color-hover: var(--additional1-color);
     --results-textcolor: var(--additional1-color);
@@ -61,7 +60,7 @@ body[data-theme="2"] {
     --additional3-color: #fcfcf5;
     --additional4-color: #000;
     --additional5-color: #ff7b00;
-    --additional6-color: linear-gradient(to right, #2e2e2c, #2e2e2c, #464545, #2e2e2c);
+    /* --additional6-color: linear-gradient(to right, #2e2e2c, #2e2e2c, #464545, #2e2e2c); */
     --additional7-color:  url('../img/micro_carbon.png');
 
     --body-background: var(--primary-color);
@@ -107,6 +106,10 @@ nav li {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+    /* z-index: 1;  */
+    will-change: transform;
 
     min-width: 120px;
     min-height: 44px;

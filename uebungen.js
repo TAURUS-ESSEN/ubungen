@@ -131,5 +131,36 @@ function showLikes() {
 }
 
 
-// Übung 21
-input = ['zgsnvdmlfuplrubt', 'vlhagaovgqjmgvwq', 'ffumlmqwfcsyqpss', 'zztdcqzqddaazdjp', 'eavfzjajkjesnlsb', 'urrvucyrzzzooxhx', 'xdwduffwgcptfwad', 'orbryxwrmvkrsxsr', 'jzfeybjlgqikjcow', 'mayoqiswqqryvqdi', 'iiyrkoujhgpgkcvx'];
+// Übung 22
+const u22Form = document.getElementById('ubung22');
+const u22result = document.getElementById("u22result");
+const quadrat = u22Form.querySelector(".quadrat");
+const u22button = u22Form.querySelector("button");
+u22button.addEventListener("click", () => {
+    blinken();
+})
+
+function blinken() {
+    quadrat.style.backgroundColor = "green";
+    let randomZeit = Math.floor(Math.random() * 5)+ 1; 
+    setTimeout ( () => {
+        quadrat.style.backgroundColor = "red";
+    }, randomZeit*1000)
+}
+
+quadrat.addEventListener("click", () => {
+    u22result.textContent = calculieren();
+})
+
+function calculieren() {
+    if (quadrat.style.backgroundColor === "red") {
+        return  "click"
+    }
+    else {
+        return "früh"
+    }
+}
+
+// Übung 25
+const imgContainer = document.getElementById("hangman")
+console.log(imgContainer)

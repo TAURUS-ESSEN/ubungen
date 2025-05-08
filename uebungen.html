@@ -107,8 +107,90 @@
             <div class="result"  id="u20result" ></div>
             <hr>
         </article>
-        
-        
+        <article>
+            <details>
+                <summary>Übung 22</summary>
+                22.) Reaktionsspiel
+                Auf einer Internetseite befindet sich ein kleines schwarzes DIV-Element. (20 x 20 px)
+                <br>Nach dem Drücken auf einen Startknopf wird das DIV grün.
+                <br>Nach kurzer, zufälliger Zeit wird das DIV rot.
+                <br>Der Benutzer soll so schnell wie möglich auf das rote DIV klicken.
+                <br>
+                    Dieses wird wieder schwarz und der Benutzer bekommt die Zeit angezeigt, 
+                die er zum Klicken gebraucht hat.
+                <br>
+                https://wiki.selfhtml.org/wiki/JavaScript/WindowOrWorkerGlobalScope/setTimeout
+            
+            
+            --------
+                <p>
+                Zusatzaufgabe:
+                <br>Das DIV soll nicht mehr farbig sein, sondern ausgeblendet.
+                <br>Nach dem Drücken auf einen Startknopf wird das DIV neu auf der Seite absolute, zufällig platziert.
+                <br>Nach kurzer, zufälliger Zeit wird das DIV eingeblendet.
+                <br>Der Benutzer so schnell wie möglich auf das DIV klicken.
+                <br>
+                https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/position</p>
+            </details>
+            <form action="#" class="flex-row" id="ubung22">
+                <button type="button" >Start</button>   
+                <output id="u22counter"> <div class="quadrat" id="quadrat"></div>
+                </output>
+            </form>
+            <div class="result" id="u22result" >
+               
+            </div>
+            <hr>
+        </article>
+        <article>
+            <details>
+                <summary>Übung 23</summary>
+                <h4> Schere, Stein, Papier </h4>
+                <br> Programmiere ein Schere Stein, Papier-Spiel.
+                <br> Der Spieler wählt durch klicken Schere, Stein oder Papier aus.
+                <br> Der Computer entscheidet zufällig.
+                <br> Das Ergebnis und der Punktestand sollen angezeigt werden.
+                <br> Bildmaterial findet Ihr in Ordner:  Übungen/bilder
+            </details>
+            <div class="">
+                Meinen Lösungscode findet man <a href="https://github.com/TAURUS-ESSEN/rock-scissors-paper" target="_blank" title="code">hier</a>. Die Demo ist <a href="https://taurus-essen.github.io/rock-scissors-paper/" target="_blank" title="demo">hier</a>. 
+            </div>
+            <hr>
+        </article>
+
+        <article>
+            <details>
+                <summary>Übung 24</summary>
+                24.) Auf einer Internetseite ist ein Bild.  (Absolute positioniert mit top: und left:)
+                <br>  Bild: bilder/fred.png
+                <br>Auf das document wird ein Eventhandler gesetzt. 
+                <br>Über das Ereignis-Objekt lässt sich die gedrückte Taste abfragen.
+                <br>Wurde eine Pfeiltaste gedrückt, soll das Bild 10 Pixel nach rechts, links, oben oder unten verschoben werden.
+            </details>
+            <div class="">
+                Meinen Lösungscode findet man <a href="https://github.com/TAURUS-ESSEN/Classzimmer" target="_blank" title="code">hier</a>. Die Demo ist <a href="https://taurus-essen.github.io/Classzimmer/" target="_blank" title="demo">hier</a>. 
+            </div>
+            <hr>
+        </article>
+        <article>
+            <details>
+                <summary>Übung 25</summary>
+                <h4>Programmiere ein Hangman-Spiel </h4>
+                <ul>
+                    <ol>1. gib ein zufälliges Wort aus einem Array aus Datei: Übungen/worte.js </ol>
+                    <ol>2. gib für jeden Buchstaben des Worts einen Unterstrich aus. _ _ _ _ _ _ _  (mit Leerzeichen oder letter-spacing)</ol>
+                    <ol>3. Frage ab, welche Taste der Tastatur der Benutzer gedrückt hat</ol>
+                    <ol>4. Handelt es sich um einen gültigen Buchstaben, gib aus ob der Buchstabe im gesuchten Wort ist</ol> 
+                    <ol>5. Ist der Buchstabe im gesuchten Wort, dann gib den gesuchten Buchstaben mit aus _ _ E _ _ E _</ol>
+                    <ol>6. Ist der Buchstabe nicht im gesuchten Wort, dann tauche das Bild hm0.jpg auf der Seite gegen hm1.jpg auf der Seite aus
+                    Bilder: bilder/hm0.jpg - bilder/hm7.jpg</ol>
+                </ul>
+            </details>
+            <div class="hanger" id="hanger">
+                <img src="./big-projekts/hangman/img/hm0.jpg" id="hangman" alt="hangman">
+            </div>
+            <hr>
+        </article>
 
 
                 <div class="code_link">

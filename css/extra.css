@@ -48,3 +48,10 @@
     visibility: visible;
     opacity: 1;
 }
+
+.quadrat {
+    margin: 2em;
+    width: 20px;
+    height: 20px;
+    background-color: var( --additional1-color)
+} 
