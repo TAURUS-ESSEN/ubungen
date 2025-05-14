@@ -166,15 +166,13 @@ function calculieren() {
 const str = 'Am 21.04.2023 fand das Konzert statt. Danach war eine Pause bis zum 1.5.2023. Manche sagen, dass der 01.05.23 auch korrekt wäre. Andere nutzen das amerikanische Format wie 2023-04-15 oder sogar 2023/05/01. Aber 32.13.2023 ist natürlich kein gültiges Datum.'
 const u28result = document.getElementById("u28Dates")
 
-const newStr = str.match(/\d{1,}\.\d{1,}\.\d{4}/gi);
-u28result.textContent = ''
-console.log(newStr.filter(str => {
+const dateFormat1 = str.match(/\d{1,}\.\d{1,}\.\d{4}/gi);
+const dateFormat2 = str.match(/\d{4}[-\/]\d{2}[-\/]\d{2}/gi);
+const validDates = dateFormat1.filter(str => {
     let date = str.split(".")
     console.log(date)
     if (Number(date[0]) > 31) { return false }
     if (Number(date[1]) > 12) { return false }
-    else {
-        u28result.textContent += str + " "
-        return true
-    }
-}));
+    return true
+})
+u28result.textContent = [...validDates, ...dateFormat2].join(", ");

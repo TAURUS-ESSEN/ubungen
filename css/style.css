@@ -6,6 +6,7 @@
     --additional3-color:  url('../img/noise_lines.webp');
     --white:  #fff;
     --black:  #000;
+    --darkgrey: rgb(207, 207, 207);
 
     --body-background: var(--primary-color);
     --wrapper-background: var(--secondary-color);
@@ -322,6 +323,13 @@ summary:hover {
     background-color: white;
     border-radius: 50%;
     transition: transform 0.3s ease;
+}
+
+.demo {
+    padding: 0.5em;
+    background-color: var(--darkgrey);
+    border-radius: 5px;
+    font-size: 0.8em;
 }
 
 @media (max-width: 700px) {
