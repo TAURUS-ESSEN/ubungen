@@ -162,5 +162,53 @@ function calculieren() {
 }
 
 // Übung 25
-const imgContainer = document.getElementById("hangman")
+const imgContainer = document.getElementById("hangman");
+const suchwordContainer = document.getElementById("suchwordContainer");
+const fehlerImgArray = ['hm0.jpg', 'hm1.jpg', 'hm2.jpg','hm3.jpg','hm4.jpg','hm5.jpg','hm6.jpg', 'hm7.jpg'];
+const currentWord = [];
+let imageIndex = 0;
 console.log(imgContainer)
+import { worte } from "./big-projekts/hangman/worte.js";
+console.log(worte[0])
+const suchwortIndex = Math.floor(Math.random()*91859);
+console.log(suchwortIndex);
+const suchwort = worte[suchwortIndex].toLowerCase();
+console.log(suchwort)
+console.log(suchwort.length)
+
+draw(suchwort)
+
+document.addEventListener('keydown', function(event) {
+    const taste = event.key.toLowerCase();  
+    if (/^[a-z]$/.test(taste)) { // проверяем, что это именно одна латинская буква
+        console.log('Gedrückte Taste:', taste);
+        // здесь можно проверить, есть ли буква в загаданном слове
+        compare(taste);
+      }
+    })
+  
+
+function draw() {
+    suchwordContainer.textContent = '';
+    for (let i=0; i<suchwort.length; i++) {
+    suchwordContainer.textContent += " _ " 
+    }
+}
+
+function compare(taste) {
+    console.log("была нажата клавиша "+taste)
+    console.log("слово было " +suchwort)
+    suchwort.split("").forEach(buch => {
+        if (buch === taste) {
+            console.log("УГАДАЛ")
+        }
+        // else {
+        //     falsheAntwort();
+        // }
+    })
+}
+
+function falsheAntwort() {
+    imageIndex++;
+    imgContainer.src=`./big-projekts/hangman/img/${fehlerImgArray[imageIndex]}`
+}
