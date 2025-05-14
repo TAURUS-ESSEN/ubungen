@@ -160,55 +160,21 @@ function calculieren() {
         return "früh"
     }
 }
+ 
 
-// Übung 25
-const imgContainer = document.getElementById("hangman");
-const suchwordContainer = document.getElementById("suchwordContainer");
-const fehlerImgArray = ['hm0.jpg', 'hm1.jpg', 'hm2.jpg','hm3.jpg','hm4.jpg','hm5.jpg','hm6.jpg', 'hm7.jpg'];
-const currentWord = [];
-let imageIndex = 0;
-console.log(imgContainer)
-import { worte } from "./big-projekts/hangman/worte.js";
-console.log(worte[0])
-const suchwortIndex = Math.floor(Math.random()*91859);
-console.log(suchwortIndex);
-const suchwort = worte[suchwortIndex].toLowerCase();
-console.log(suchwort)
-console.log(suchwort.length)
+// Übung 28
+const str = 'Am 21.04.2023 fand das Konzert statt. Danach war eine Pause bis zum 1.5.2023. Manche sagen, dass der 01.05.23 auch korrekt wäre. Andere nutzen das amerikanische Format wie 2023-04-15 oder sogar 2023/05/01. Aber 32.13.2023 ist natürlich kein gültiges Datum.'
+const u28result = document.getElementById("u28Dates")
 
-draw(suchwort)
-
-document.addEventListener('keydown', function(event) {
-    const taste = event.key.toLowerCase();  
-    if (/^[a-z]$/.test(taste)) { // проверяем, что это именно одна латинская буква
-        console.log('Gedrückte Taste:', taste);
-        // здесь можно проверить, есть ли буква в загаданном слове
-        compare(taste);
-      }
-    })
-  
-
-function draw() {
-    suchwordContainer.textContent = '';
-    for (let i=0; i<suchwort.length; i++) {
-    suchwordContainer.textContent += " _ " 
+const newStr = str.match(/\d{1,}\.\d{1,}\.\d{4}/gi);
+u28result.textContent = ''
+console.log(newStr.filter(str => {
+    let date = str.split(".")
+    console.log(date)
+    if (Number(date[0]) > 31) { return false }
+    if (Number(date[1]) > 12) { return false }
+    else {
+        u28result.textContent += str + " "
+        return true
     }
-}
-
-function compare(taste) {
-    console.log("была нажата клавиша "+taste)
-    console.log("слово было " +suchwort)
-    suchwort.split("").forEach(buch => {
-        if (buch === taste) {
-            console.log("УГАДАЛ")
-        }
-        // else {
-        //     falsheAntwort();
-        // }
-    })
-}
-
-function falsheAntwort() {
-    imageIndex++;
-    imgContainer.src=`./big-projekts/hangman/img/${fehlerImgArray[imageIndex]}`
-}
+}));
